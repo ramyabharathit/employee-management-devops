@@ -21,7 +21,7 @@ pipeline {
                 sh '''
                     docker stop employee-app || true
                     docker rm employee-app || true
-                    docker run -d -p 8080:80 --name employee-app employee-management-app
+                    docker run -d -p 80:80 --name employee-app employee-management-app
                 '''
             }
         }
